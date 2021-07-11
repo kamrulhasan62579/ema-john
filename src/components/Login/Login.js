@@ -3,8 +3,6 @@ import './Login.css';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebaseConfig';
-import eye4 from '../../images/eye.png'
-import eye3 from '../../images/eye2.png'
 import { userContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import { createContext } from 'react';
@@ -13,7 +11,7 @@ import { createContext } from 'react';
 if (!firebase.apps.length) {
  firebase.initializeApp(firebaseConfig);
 }else {
-  firebase.app(); // if already initialized, use that one
+  firebase.app(); 
 }
 
 function Login() {
@@ -104,87 +102,87 @@ function Login() {
     }
   const [showpwd, setShowpwd] = useState(false)
   // ------------------------google sign in ---------------------
-  var googleProvider = new firebase.auth.GoogleAuthProvider();
-  const handleGoogleSignIn = () =>{
-    firebase.auth()
-    .signInWithPopup(googleProvider)
-    .then((res) => {
-        const {displayName, photoURL, email} = res.user
-        history.replace(from);
-        const userInfo ={
-          name: displayName,
-          photo: photoURL,
-          email: email,
-          success: "Successfully sign in with Google",  
-          isSignIn: true,
-          error: ''
-        }
-        setLoggedInUser(userInfo)
-        history.replace(from);
-        setUser(userInfo)
-    }).catch((error) => {
-        const userInfo ={
-          success: '',
-          error: error.message
-        }
-        setUser(userInfo)
-    });
-  }
-  // ---------------------facebook sign in -----------------------
-  var facebookProvider = new firebase.auth.FacebookAuthProvider();
-  const handleFacebookSignIn = () =>{
-    firebase
-    .auth()
-    .signInWithPopup(facebookProvider)
-    .then((res) => {
-      const {displayName, photoURL, email} = res.user
-      const userInfo ={
-        name: displayName,
-        photo: photoURL,
-        email: email,
-        success: "Successfully sign in with Facebook",
-        isSignIn: true,
-        error: ''
-      }
-      setLoggedInUser(userInfo)
-        history.replace(from);
-      setUser(userInfo)
-    })
-    .catch((error) => {
-      const userInfo ={
-        success: '',
-        error: error.message
-      }
-      setUser(userInfo)
-      });
-  }
-  // --------------------------sign in with github -----------------
-  var githubProvider = new firebase.auth.GithubAuthProvider();
-  const handleGithubSignIn = () =>{
-    firebase
-    .auth()
-    .signInWithPopup(githubProvider)
-    .then((res) => {
-      const {displayName, photoURL, email} = res.user
-      const userInfo ={
-        name: displayName,
-        photo: photoURL,
-        email: email,
-        success: "Successfully sign in with Github",
-        isSignIn: true,
-        error: ''
-      }
-        setLoggedInUser(userInfo)
-        history.replace(from);
-      setUser(userInfo)
-    }).catch((error) => {
-      const userInfo ={
-        success: '',
-        error: error.message
-      }
-      setUser(userInfo)
-    });
-  }
+  // var googleProvider = new firebase.auth.GoogleAuthProvider();
+  // const handleGoogleSignIn = () =>{
+  //   firebase.auth()
+  //   .signInWithPopup(googleProvider)
+  //   .then((res) => {
+  //       const {displayName, photoURL, email} = res.user
+  //       history.replace(from);
+  //       const userInfo ={
+  //         name: displayName,
+  //         photo: photoURL,
+  //         email: email,
+  //         success: "Successfully sign in with Google",  
+  //         isSignIn: true,
+  //         error: ''
+  //       }
+  //       setLoggedInUser(userInfo)
+  //       history.replace(from);
+  //       setUser(userInfo)
+  //   }).catch((error) => {
+  //       const userInfo ={
+  //         success: '',
+  //         error: error.message
+  //       }
+  //       setUser(userInfo)
+  //   });
+  // }
+  // // ---------------------facebook sign in -----------------------
+  // var facebookProvider = new firebase.auth.FacebookAuthProvider();
+  // const handleFacebookSignIn = () =>{
+  //   firebase
+  //   .auth()
+  //   .signInWithPopup(facebookProvider)
+  //   .then((res) => {
+  //     const {displayName, photoURL, email} = res.user
+  //     const userInfo ={
+  //       name: displayName,
+  //       photo: photoURL,
+  //       email: email,
+  //       success: "Successfully sign in with Facebook",
+  //       isSignIn: true,
+  //       error: ''
+  //     }
+  //     setLoggedInUser(userInfo)
+  //       history.replace(from);
+  //     setUser(userInfo)
+  //   })
+  //   .catch((error) => {
+  //     const userInfo ={
+  //       success: '',
+  //       error: error.message
+  //     }
+  //     setUser(userInfo)
+  //     });
+  // }
+  // // --------------------------sign in with github -----------------
+  // var githubProvider = new firebase.auth.GithubAuthProvider();
+  // const handleGithubSignIn = () =>{
+  //   firebase
+  //   .auth()
+  //   .signInWithPopup(githubProvider)
+  //   .then((res) => {
+  //     const {displayName, photoURL, email} = res.user
+  //     const userInfo ={
+  //       name: displayName,
+  //       photo: photoURL,
+  //       email: email,
+  //       success: "Successfully sign in with Github",
+  //       isSignIn: true,
+  //       error: ''
+  //     }
+  //       setLoggedInUser(userInfo)
+  //       history.replace(from);
+  //     setUser(userInfo)
+  //   }).catch((error) => {
+  //     const userInfo ={
+  //       success: '',
+  //       error: error.message
+  //     }
+  //     setUser(userInfo)
+  //   });
+  // }
 
 
   const handleSignOut = () =>{
@@ -266,9 +264,9 @@ function Login() {
         }
         <p style={{color: "red"}}>{user.error}</p>
         <p style={{color: "green"}}>{user.success}</p> <br/>
-        <button className="btn" onClick={handleGoogleSignIn} className="btn">Sign in with Google</button><br/>   
+        {/* <button className="btn" onClick={handleGoogleSignIn} className="btn">Sign in with Google</button><br/>   
         <button className="btn" onClick={handleFacebookSignIn} className="btn">Sign in with Facebook</button> <br/> 
-        <button className="btn" onClick={handleGithubSignIn} className="btn">Sign in with Github</button>
+        <button className="btn" onClick={handleGithubSignIn} className="btn">Sign in with Github</button> */}
      </div>
   );
 }
