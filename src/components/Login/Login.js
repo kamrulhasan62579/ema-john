@@ -89,8 +89,8 @@ function Login() {
         userInfo.name = res.user.displayName
         userInfo.isSignIn = true
         userInfo.error = ''
-        history.replace(from);
         setLoggedInUser(userInfo)
+        history.replace(from);
         setUser(userInfo)     
       })
       .catch((error) => {

@@ -52,9 +52,9 @@ const handleProceedCheakout = () =>{
         <div className="shop-container" >
             <div className="product-container">
             <div className="text-center">
-                     {
+                     {/* {
                         cart.length === 0 && <Loading></Loading>
-                    }
+                    } */}
                </div>
                  {
                      cart.map(prd => <Product product={prd}>
