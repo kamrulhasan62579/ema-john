@@ -55,12 +55,12 @@ const Shop = () => {
                </div>
                  {
                      products.map(pd => <Product key={pd.key} product={pd}>
-                         <button onClick={() => handleAddCart(pd)} className="btn">Add to cart</button>
+                         <button onClick={() => handleAddCart(pd)} className="normal-btn">Add to cart</button>
                      </Product> )
                  }
             </div>
             <div className="cart-container">
-                 <Cart cart={cart}> <Link to={`/review`} > <button className="btn">Review order</button> </Link> </Cart>
+                 <Cart cart={cart}> <Link to={`/review`} > <button className="normal-btn">Review order</button> </Link> </Cart>
             </div>
         </div>
     );

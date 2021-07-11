@@ -31,3 +31,7 @@
     transform: translateX(-50%);
     top: 40px;
 }
+.manage-form{
+    background: -webkit-radial-gradient(darkcyan, rgb(184, 175, 96));
+    background-repeat: no-repeat;
+}

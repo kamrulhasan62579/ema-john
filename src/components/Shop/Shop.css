@@ -4,6 +4,16 @@
 .cart-content{
     text-align: center; 
 }
+.normal-btn{
+    height: 30px;
+    width: 200px;
+    background: -webkit-linear-gradient(orange, tomato);
+    border: 1px solid red;
+    border-radius: 3px;
+}
+.normal-btn:hover{
+    opacity: 0.7;
+}
 /* Media query */
 @media(max-width: 1500px){
     .shop-container{
@@ -38,11 +48,19 @@
     nav button{
         font-size: 25px;
     }
+    .int{
+        height: 36px;
+        width: 40%;
+    }
 }
 
 @media(max-width: 1250px){
     .name-link{
         font-size: 22px;
+    }
+    .int{
+        height: 33px;
+        width: 40%;
     }
 }
 
@@ -79,5 +97,9 @@
     }
     nav button{
         font-size: 15px;
+    }
+    .int{
+        height: 30px;
+        width: 50%;
     }
 }

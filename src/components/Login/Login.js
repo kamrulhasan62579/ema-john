@@ -2,17 +2,16 @@ import { useContext, useState } from 'react';
 import './Login.css';
 import firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from './firebaseConfig';
 import { userContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import { createContext } from 'react';
 
 
-if (!firebase.apps.length) {
- firebase.initializeApp(firebaseConfig);
-}else {
-  firebase.app(); 
-}
+// if (!firebase.apps.length) {
+//  firebase.initializeApp(firebaseConfig);
+// }else {
+//   firebase.app(); 
+// }
 
 function Login() {
 
@@ -210,7 +209,7 @@ function Login() {
       {
         user.isSignIn && <button onClick={handleSignOut}>Sign Out</button>
       }
-     <div className="sign">
+     <div>
         {
           newUser 
             ? 
@@ -218,16 +217,16 @@ function Login() {
                  <h3 className="h31">LET'S SIGN UP TO THIS WEBSITE</h3>
                  <br/> <br/>
                  <form onSubmit={handleSubmit} >
-                    <input required onBlur={handleBlur} type="text" name="name" placeholder="  Name"/> <br/> <br/>
-                    <input required onBlur={handleBlur} type="email" name="email" placeholder="  Email " /> <br/> <br/>
-                    <input required onBlur={handleBlur} id="password" 
+                    <input className="int" required onBlur={handleBlur} type="text" name="name" placeholder="  Name"/> <br/> <br/>
+                    <input className="int" required onBlur={handleBlur} type="email" name="email" placeholder="  Email " /> <br/> <br/>
+                    <input className="int" required onBlur={handleBlur} id="password" 
                     type={showpwd ? "text" : "password"} name="password"
                      placeholder="  Enter Password"  /> <br/>
                      {
                       showpwd ? <p onClick={() => setShowpwd(!showpwd)}>Hide</p> 
                       : <p onClick={() => setShowpwd(!showpwd)}>Show</p>
                     }  <br/> <br/>
-                    <input className="submit btn btn-success" type="submit" value={newUser ? "SIGN UP" : "LOG IN"}/><br/> <br/>
+                    <input className="int btn btn-primary" type="submit" value={newUser ? "SIGN UP" : "LOG IN"}/><br/> <br/>
                  </form>
             </div> 
             :
@@ -235,8 +234,8 @@ function Login() {
                  <h3 className="h31">LET'S LOG IN TO THIS WEBSITE</h3>
                  <br/><br/>
                  <form onSubmit={handleSubmit}>
-                    <input required onBlur={handleBlur} type="email" name="email" placeholder="  Email " /> <br/> <br/>
-                    <input required onBlur={handleBlur} id="password" 
+                    <input className="int" required onBlur={handleBlur} type="email" name="email" placeholder="  Email " /> <br/> <br/>
+                    <input className="int" required onBlur={handleBlur} id="password" 
                     type={showpwd ? "text" : "password"} name="password" 
                     placeholder="  Enter Password"  /> <br/>
                     {
@@ -244,7 +243,7 @@ function Login() {
                       : <p onClick={() => setShowpwd(!showpwd)}>Show</p>
                     }
                      <br/> <br/>
-                    <input className="submit btn btn-success" type="submit" value={newUser ? "SIGN UP" : "LOG IN"}/><br/> <br/>
+                    <input className="int btn btn-primary" type="submit" value={newUser ? "SIGN UP" : "LOG IN"}/><br/> <br/>
                  </form>
             </div>
         }

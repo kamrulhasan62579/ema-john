@@ -52,17 +52,17 @@ const handleProceedCheakout = () =>{
         <div className="shop-container" >
             <div className="product-container">
             <div className="text-center">
-                     {/* {
+                     {
                         cart.length === 0 && <Loading></Loading>
-                    } */}
+                    }
                </div>
                  {
                      cart.map(prd => <Product product={prd}>
-                     <br/><button onClick={() => handleRemove(prd.key)} className="btn">Remove</button></Product> )
+                     <br/><button onClick={() => handleRemove(prd.key)} className="normal-btn">Remove</button></Product> )
                  }
             </div>
             <div className="cart-container">
-                 <Cart cart={cart}> <button onClick={handleProceedCheakout} className="btn">Proceed Cheakout</button> </Cart>
+                 <Cart cart={cart}> <button onClick={handleProceedCheakout} className="normal-btn">Proceed Cheakout</button> </Cart>
             </div> 
         </div>
     );

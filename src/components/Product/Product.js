@@ -23,7 +23,7 @@ const {name, category, key, img, quantity = 0, price, star, stock, features = []
                         props.children
                     }
                 </div>
-                <div className="">
+                <div>
                     <br/>
                     <div>Rating: {star} star <small> <strong>({star}/5)</strong> </small> </div>
                     {

@@ -28,7 +28,7 @@ nav ul li:hover a{
     color: orange;
 }
 nav{
-    line-height: 70px;
+    line-height: 75px;
     background: crimson;
     position: fixed;
     width: 100%;

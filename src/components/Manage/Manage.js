@@ -72,44 +72,44 @@ const Manage = () => {
                     <div className="txt">Seconds</div>
                 </div>
             </div> */}
-            <div className="text-center container">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <span>Product Name</span>                    
-                    <input className="form-control" {...register("name", { required: true })} />
+            <div className="text-center">
+                <form className="manage-form" onSubmit={handleSubmit(onSubmit)}>
+                    <br/><span>Product Name</span> <br/>                   
+                    <input className="int" {...register("name", { required: true })} /> <br/>
                     {errors.name && <span className="error">Product name is required</span>} <br/>
 
-                     <span>Product Key</span>
-                    <input className="form-control" {...register("key", { required: true })} />
+                     <span>Product Key</span> <br/>
+                    <input className="int" {...register("key", { required: true })} /> <br/>
                     {errors.key && <span className="error">Product key is required</span>} <br/>  
 
-                    <span>Product Category</span>
-                    <input className="form-control" {...register("category", { required: true })} />
+                    <span>Product Category</span> <br/>
+                    <input className="int" {...register("category", { required: true })} /> <br/>
                     {errors.category && <span className="error">Product category is required</span>} <br/>  
 
-                    <span>Product Seller Company</span>
-                    <input className="form-control" {...register("seller", { required: true })} />
+                    <span>Product Seller Company</span> <br/>
+                    <input className="int" {...register("seller", { required: true })} /> <br/>
                     {errors.seller && <span className="error">Product seller is required</span>} <br/>  
 
-                    <span>Product Stock Quantity</span>
-                    <input className="form-control" {...register("stock", { required: true })} />
+                    <span>Product Stock Quantity</span> <br/>
+                    <input className="int" {...register("stock", { required: true })} /> <br/>
                     {errors.stock && <span className="error">Stock is required</span>} <br/>  
 
-                    <span>Product Star Ratings</span>
-                    <input className="form-control" {...register("star", { required: true })} />
+                    <span>Product Star Ratings</span> <br/>
+                    <input className="int" {...register("star", { required: true })} /> <br/>
                     {errors.star && <span className="error">Star is required</span>} <br/>  
 
-                    <span>Product Price</span>
-                    <input className="form-control" {...register("price", { required: true })} />
+                    <span>Product Price</span> <br/>
+                    <input className="int" {...register("price", { required: true })} /> <br/>
                     {errors.price && <span className="error">Product price is required</span>} <br/>
 
-                    <span>Product Shipping Charge</span>
-                    <input className="form-control" {...register("shipping", { required: true })} />
+                    <span>Product Shipping Charge</span> <br/>
+                    <input className="int" {...register("shipping", { required: true })} /> <br/>
                     {errors.shipping && <span className="error">Shipping charge is required</span>} <br/>  
 
-                    <span>Insert hosted image url </span>
-                    <input className="form-control" {...register("img", { required: true })} />
-                    {errors.img && <span className="error">Hosted imgage url is required</span>} <br/>                    
-                    <input className="btn-success" type="submit" />
+                    <span>Insert hosted image url </span> <br/>
+                    <input className="int" {...register("img", { required: true })} /> <br/>
+                    {errors.img && <span className="error">Hosted imgage url is required</span>} <br/>   <br/>                 
+                    <input className="int btn btn-success" type="submit" /> <br/> <br/>
                 </form>
             </div>
         </div>

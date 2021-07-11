@@ -1,6 +1,9 @@
 .ship-form{
     text-align: center;
+    background: -webkit-radial-gradient(rgb(155, 105, 175), rgb(163, 130, 68));
+    background-repeat: no-repeat;
 }
 .error{
     color: red;
+    font-size: 12px;
 }
