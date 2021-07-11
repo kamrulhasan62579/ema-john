@@ -1,0 +1,16 @@
+.single-product{
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    padding: 10px;
+}
+.btn{
+    height: 26px;
+    width: 160px;
+    border: 1px solid;
+    background: goldenrod;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.img{
+    text-align: center;
+}

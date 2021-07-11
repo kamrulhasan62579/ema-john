@@ -1,0 +1,33 @@
+.duration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.count{
+    text-align: center;
+}
+.h1{
+    text-align: center;
+    position: relative;
+}
+.h1:before{
+    content: "";
+    position: absolute;
+    height: 5px ;
+    width : 180px;
+    background: red;
+    left: 50.5%;
+    transform: translateX(-50%);
+    top: 54px;
+}
+.h1:after{
+    content: "Rest of time";
+    font-size: 19px;
+    position: absolute;
+    padding: 5px;
+    background: #fff;
+    left: 50.5%;
+    transform: translateX(-50%);
+    top: 40px;
+}

@@ -1,0 +1,55 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 15x;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #fff;
+}
+nav ul li{
+    list-style: none;
+    padding: 10px;
+    transition: all 0.6s;
+}
+.link:hover{
+    text-decoration: none;
+}
+nav ul li:hover{
+    box-shadow: 0.5px 0.5px 5px 5px orange;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+nav ul li:hover a{
+    color: orange;
+}
+nav{
+    line-height: 70px;
+    background: crimson;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+}
+nav img{
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+nav button{
+    height: 35px;
+    width: 100px;
+    margin-top: 30px;
+    margin-right: 20px;
+    background: orange;
+    color: #fff;
+}
+nav ul{
+    display: flex;
+    margin: auto;    
+}
