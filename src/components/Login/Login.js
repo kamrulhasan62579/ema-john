@@ -5,13 +5,14 @@ import "firebase/auth";
 import { userContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import { createContext } from 'react';
+import firebaseConfig from './firebaseConfig';
 
 
-// if (!firebase.apps.length) {
-//  firebase.initializeApp(firebaseConfig);
-// }else {
-//   firebase.app(); 
-// }
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}else {
+  firebase.app(); 
+}
 
 function Login() {
 
